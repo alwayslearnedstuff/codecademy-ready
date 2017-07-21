@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Notes from Day 1: Intro to HTML</title>
+</head>
+  <body>
+    <!-- look to build the lessons in React or Vue with one-line style -->
+    <h5>Note to reader:</h5>
+    <ul>
+      <li>My goal is to combine code and explanations on one line, e.g.:
+        <ul><li>Code: explanation</li></ul>
+      </li>
+      <li>I use a deprecated tag (which shouldn't be used...but which all browsers still recognize) called:</li>
+        <ul><li><xmp><xmp>: which displays raw text    ...and spaces...   and HTML tags like: <p></p><br/><li></li> etc. When you type those tags in an HTML doc, they are not displayed on the screen. </xmp></li></ul> 
+    <li>Experienced web devs display HTML tags in the browser (like on Codecademy lessons) with CSS...but that's past my skillset at this point.</li>
+    </ul>
+    <h3>Day 1: Intro to HTML</h3>
+      <ul>
+        <li><h5 style="display:inline">Element Structure:</h5><xmp style="display:inline"><opening_tag> Element content - text or link </closing_tag (if there is one: <br><hr><img> don't have closing tags)></xmp></li>
+        <li>Basic html page structure:
+        <li style="list-style: none;">
+          <xmp>
+            <!DOCTYPE html> <== Current standard is HTML 5. DOCTYPE tells browser what to expect. As HTML standards change, this ensures futureproofing.
+            <html>
+            <head> <== contains metadata not displayed in browser; more below
+              <title></title> <== Title appears in browser tab
+            </head>
+            <body>
+              <p>This is where the meat and potatoes lives</p> <== <p> is paragraph tag
+            </body>
+            </html>
+          </xmp>    
+        </li>
+      </li>
+      <li>HTML docs are collection of parent-child relationships</li>  
+      <li style="list-style: none;">
+          <xmp>
+          <body> <== parent
+            <p>Paragraph</p> <== child
+          </body>
+          </xmp>
+      </li>
+      <li>
+        <xmp>
+          Another example: 
+          <body> <== parent
+            <div> <== child
+              <h1>Student</h1> <== grandchild of <body>; child of <div>; sibling of next element
+              <p>Get Started</p> <== grandchild of <body>; child of <div>; sibling of prior element
+            </div>
+          </body>
+        </xmp>
+      </li>
+      </ul>
+    <h3>Day 2: Common Elements/HTML Tags </h3>
+    <h5>Here's the way the practice example page below looks when built; code below it:</h5>
+      <h1>The Brown Bear</h1>
+              <div id="introduction">
+                <h2>About Brown Bears</h2>
+                <p>The brown bear (<em>Ursus arctos</em>) is native to parts of northern Eurasia and North America. Its conservation status is currently <strong>Least Concern</strong>.<br /><br /> There are many subspecies within the brown bear species, including the Atlas bear and the Himalayan brown bear.</p>
+                <h3>Species</h3>
+                <h3>Features</h3>
+                <p>Brown bears are not always completely brown. Some can be reddish or yellowish. They have very large, curved claws and huge paws. Male brown bears are often 30% larger than female brown bears. They can range from 5 feet to 9 feet from head to toe.</p>
+              </div>
+              <div id="habitat">
+                <h2>Habitat</h2>
+                <h3>Countries with Large Brown Bear Populations</h3>
+                <h3>Countries with Small Brown Bear Populations</h3>
+                <p>Some countries with smaller brown bear populations include Armenia, Belarus, Bulgaria, China, Finland, France, Greece, India, Japan, Nepal, Poland, Romania, Slovenia, Turkmenistan, and Uzbekistan.</p>
+              </div>
+              <div id="media">
+                <h2>Media</h2>
+              </div>
+      <xmp>
+        <div> <== divides HTML docs into sections and can contain text, images, links, etc.
+        <span> <== used to wrap small pieces of text within a sentence
+        <em> <== generally renders as italics
+        <strong> <== generally renders as bold 
+        // Here's code from the page. Notice how <div></div> tags surround sections
+        <!DOCTYPE html>
+          <html>
+            <head>
+              <title>Brown Bears</title>
+            </head>
+            <body>
+              <h1>The Brown Bear</h1>
+              <div id="introduction">
+                <h2>About Brown Bears</h2>
+                <p>The brown bear (<em>Ursus arctos</em>) is native to parts of northern Eurasia and North America. Its conservation status is currently <strong>Least Concern</strong>.<br /><br /> There are many subspecies within the brown bear species, including the Atlas bear and the Himalayan brown bear.</p>
+                <h3>Species</h3>
+                <h3>Features</h3>
+                <p>Brown bears are not always completely brown. Some can be reddish or yellowish. They have very large, curved claws and huge paws. Male brown bears are often 30% larger than female brown bears. They can range from 5 feet to 9 feet from head to toe.</p>
+              </div>
+              <div id="habitat">
+                <h2>Habitat</h2>
+                <h3>Countries with Large Brown Bear Populations</h3>
+                <h3>Countries with Small Brown Bear Populations</h3>
+                <p>Some countries with smaller brown bear populations include Armenia, Belarus, Bulgaria, China, Finland, France, Greece, India, Japan, Nepal, Poland, Romania, Slovenia, Turkmenistan, and Uzbekistan.</p>
+              </div>
+              <div id="media">
+                <h2>Media</h2>
+              </div>
+            </body>
+          </html>
+      </xmp>
+      <h4>Image tags</h4>
+      <ul>
+        <li>img tags self closing;
+        <li>have "src" attribute with name:value pairs</li>
+        <li>image location can be web or local</li>
+        <li> <xmp><img src="image-location.com" /></xmp></li>
+        </ul>
+      <h4>Video tags</h4>
+      <ul>
+        <li>video tags not self closing</li>
+        <li><xmp>
+          <video src="myVideo.mp4" width="320" height="240" controls>
+            Video not supported (displayed if vid doesn't display)
+          </video></xmp></li> 
+      </ul>
+      <h4>Links</h4>
+      <h5>External links</h5>
+      <ul>
+        <li><em>target</em> attribute describes where pages open</li>
+        <li><em>"_blank"</em> opens in new window (modern browsers open in new tabs).</li>
+      </ul>
+      <h5>Internal links</h5>
+      <ul>
+        <li>Most sites link to internal </li>
+        <li><em>relative paths</em> show link locally</li>
+          <ul><li>e.g. ./index.html</li></ul>
+        <li><em>absolute paths</em> show full link</li>
+          <ul><li>e.g. www.codecademy.com/learn/ruby</li></ul>
+        <li>Use <em>id</em> to direct interal links</li>
+        <li>e.g.:</li>
+        <ul><li><xmp>   <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#habitat">Habitat</a></li>
+    <li><a href="#media">Media</li></li></xmp></li></ul>
+      </ul>
+      <h5>Semantic vs non-semantic tags</h5>
+      <ul>
+        <li><em>Semantic</em> tags like <xmp style="display:inline"><nav></xmp> define content inside them</li>
+        <li><em>Non-Semantic</em> tags like <xmp style="display:inline"><div></xmp> don't</li>
+      </ul>
+      <h5>here's code of the page at this point (note especially use of nav and div:</h5>
+      <xmp>
+        <!DOCTYPE html>
+        <html>
+        
+        <head>
+          <title>Brown Bears</title>
+        </head>
+        
+        <body>
+          <nav>
+            <a href="./index.html">Brown Bear</a>
+          <a href="./aboutme.html">About Me</a>
+          </nav>
+            <h1>The Brown Bear</h1>
+         <nav>
+          <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#habitat">Habitat</a></li>
+            <li><a href="#media">Media</a></li>
+          </ul>
+          </nav>
+          <div id="introduction">
+            <h2>About Brown Bears</h2>
+            <p>The brown bear (<em>Ursus arctos</em>) is native to parts of northern Eurasia and North America. Its conservation status is currently <strong>Least Concern</strong>.<br /><br /> There are many subspecies within the brown bear species, including the
+              Atlas bear and the Himalayan brown bear.</p>
+            <a href="https://en.wikipedia.org/wiki/Brown_bear" target="_blank">Learn More</a>
+            <h3>Species</h3>
+            <ol>
+              <li>Arctos</li>
+              <li>Collarus</li>
+              <li>Horribilis</li>
+              <li>Nelsoni (extinct)</li>
+            </ol>
+            <h3>Features</h3>
+            <p>Brown bears are not always completely brown. Some can be reddish or yellowish. They have very large, curved claws and huge paws. Male brown bears are often 30% larger than female brown bears. They can range from 5 feet to 9 feet from head to toe.</p>
+          </div>
+          <div id="habitat">
+            <h2>Habitat</h2>
+            <h3>Countries with Large Brown Bear Populations</h3>
+            <ol>
+              <li>Russia</li>
+              <li>United States</li>
+              <li>Canada</li>
+            </ol>
+            <h3>Countries with Small Brown Bear Populations</h3>
+            <p>Some countries with smaller brown bear populations include Armenia, Belarus, Bulgaria, China, Finland, France, Greece, India, Japan, Nepal, Poland, Romania, Slovenia, Turkmenistan, and Uzbekistan.</p>
+          </div>
+          <div id="media">
+            <h2>Media</h2>
+            <img src="https://s3.amazonaws.com/codecademy-content/courses/web-101/web101-image_brownbear.jpg" />
+            <video src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-1/lesson-2/htmlcss1-vid_brown-bear.mp4" height="240" width="320" controls>Video not supported</video>
+          </div>
+        </body>
+        </html>
+      </xmp>
+      <h3>Tips from Articles</h3>
+      <ul>
+        <li>Discussed type of IDE to use: I use <a href="c9.io">Cloud 9</a> (which isn't listed)</li>
+        <li>Suggest to create a <em>Projects</em>folder. Did that and put the 2 unit projects in it</li>
+        <li>From command line in c9, type: <xmp style="display:inline">mkdir "Travel Blog" "Two Sandals Soups and Salads"</xmp></li>
+      </ul>
+      <h3>Day 4, Project 1: Travel Blog</h3>
+      <h5>Here are the steps:</h5>
+      <xmp>
+        
+Mark the tasks as complete by checking them off
+1.
+In your file manager, make a new folder inside of your development directory called Paris. Inside of that folder, create a new HTML file called index.html. Open index.html in your text editor.
+2.
+In index.html, add the basic code for a website to be structured properly (also called boilerplate code).
+Stuck? Get a hint
+
+3.
+Title your website: My Travel Blog
+Stuck? Get a hint
+4.
+Directly below the opening <body> tag of your index.html file, add an <h1> that says My Travels. Below that, add an <h2> that says Paris. Below that, add an <h3> that says September 2016.
+5.
+Below the <h3> element that says September 2016, add opening and closing <nav> tags. Do not add any content between them right now.
+6.
+Below the <nav> element you just created, create 3 new sections using the <div> tag. Give them the following ids, respectively:
+
+highlights
+story
+contact
+Remember, <div>s structure your content, and the ids can be used to link within a page.
+Stuck? Get a hint
+7.
+Nest an <h3> inside the highlights <div>. The heading should say: My Favorite Spots in Paris.
+8.
+Nest an <h2> inside the story <div>. The heading should say:
+
+A Weekend on the Seine.
+9.
+Below that, add three <h4>s that say Day 1, Day 2, and Day 3.
+
+Give each opening tag an id that we will later use for same-page navigation. The first <h4> should have an id with a value of day1 and the other two should have ids that follow the same pattern.
+10.
+Nest an <h4> inside of the contact <div>. The heading should say:
+
+If you have any questions about my blog, here is my contact information:
+11.
+Now that you have organized your webpage, preview it in the browser to see how much you've accomplished! Every few steps, refresh the page to make sure that your work looks the way you expect it to and to see the changes you're making!
+
+Click here to see what your website should look like!
+12.
+Now you are going to construct the navigation bar for your page. Inside of the <nav> tag under the heading that says September 2016, nest an unordered list with these 3 list items:
+
+Highlights
+Full Story
+Contact
+
+Make each list item a same-page link to its respective section, using the <a> tag.
+Stuck? Get a hint
+13.
+Under Full Story, add an ordered list with these 3 list items:
+
+Day 1
+Day 2
+Day 3
+Make each list item a link to its respective day on the blog, using the <a> tag.
+Stuck? Get a hint
+14.
+Now that you've structured your navigation, this is a great time to preview your page in the browser!
+
+Click here to see what your page should look like now!
+15.
+Now you're going to add information about your trip to Paris! Below the heading that says My Favorite Spots in Paris, create an unordered list with the following list items:
+
+The Eiffel Tower
+The Louvre
+Jardin du Luxembourg
+Palais Garnier
+16.
+Below the list, add a paragraph with the following text:
+
+Click here to learn more about Paris!
+Turn here into a link that goes to:
+
+https://en.wikipedia.org/wiki/Paris
+Add the target attribute with the appropriate value to your link so that the article opens in a new page or tab.
+Stuck? Get a hint
+17.
+Directly below the heading A Weekend on the Seine, add a paragraph with this text:
+
+I was lucky enough to spend three days visiting Paris this month! I went with a friend and we were able to see many things while we were there!
+18.
+Below Day 1, add a paragraph with the following text:
+
+On our first day, we started by visiting Montmartre right away. Our second stop was the Eiffel Tower (check out that beautiful picture!) We ate dinner at a cute little bistro overlooking la Seine.
+Emphasize the following French words:
+
+Montmartre
+la Seine
+Stuck? Get a hint
+19.
+Below Day 2, add a paragraph with this text:
+
+On our second day, we went shopping on Avenue des Champs Elysees. Every single person we saw was dressed in the height of fashion.
+
+After we finished shopping, we visited some really beautiful places! We went to Notre Dame. We went on a macaron tour of Paris and ate all of the best macarons the city had to offer. After we finished shopping, we visited le Louvre.
+Emphasize the following French words:
+
+Avenue des Champs Elysees
+Notre Dame
+le Louvre
+Add two breaks in between the 2nd and 3rd sentences.
+Stuck? Get a hint
+20.
+Below `Day 3', add a paragraph with the following text:
+
+The picture below is of me visiting the Arc de Triomphe. It's huge! We also went to le Musee D'Orsay. Seeing the work of Renoir, Monet, and Van Gogh in person was completely breathtaking. I was surprised to see that the museum also had many sculptures including those by Auguste Rodin, Paul Gauguin, and Alfred Barye.
+Emphasize the following French words:
+
+Arc de Triomphe
+le Musee D'Orsay
+21.
+Now that you've added the text, take a minute to preview your work in the browser.
+
+Click here to see what your project should look like now!
+22.
+Below the paragraph for each day, add these images (in order):
+
+Day 1
+
+Day 2
+
+Day 3
+Stuck? Get a hint
+23.
+Inside the contact <div>, nest a paragraph with the following text:
+
+email: contact@mytravels.com | phone: 917-555-1098 | address: 371 284th St, New York, NY, 10001
+Make the following words and the colons that follow them strong using the <strong> tag:
+
+email
+phone
+address
+24.
+Congratulations! You've finished your website! Preview it in the browser!
+
+Click here to see what it should look like now!
+
+      </xmp>
+      <h3>Day 5: Two Sandals and a Soup project</h3>
+      <h5>Project instructions:</h5>
+      <p>
+        
+In this project, you will recreate a web page that contains the restaurant's menu. The solution is provided to the right. You must use your knowledge of HTML and the website to the right to recreate it on your own computer.
+
+In addition to the visual content in this image, the website must also contain:
+
+Two HTML files in a project folder: index.html and home.html. Note: we do not provide any instructions for what you should add to home.html. The purpose of this file is to practice linking to an HTML document in a shared folder.
+Links from Home and Menu to the files home.html and index.html, respectively.
+Links from Soups, Salads and Desserts in the unordered list to their section on the menu.
+The three images displayed on the web page (see image links below).
+Image links:
+
+Copy and paste the URL for this tomato soup picture
+Copy and paste the URL for this caesar salad picture
+Copy and paste the URL for this chocolate chip cookie picture
+Use the website to the right and the resources above to guide you through the project.
+      </p>
+      <h3>Tips</h3>
+      <ul>
+        <li>Use "/" for the <em>href</em> for the page you're on. E.g. <xmp style="display:inline"><a href="/">Home</a> </xmp>the nav item on home.html</li>
+        
+      </ul>
+  </body>
+</html>

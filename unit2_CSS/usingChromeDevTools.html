@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+<body>
+<div class="_17BgxvIc-BHyTKH0aINNIt"><h2 id="using-chrome-devtools-for-css-visual-rules">Using Chrome DevTools for CSS Visual Rules</h2>
+<p>Requirements:</p>
+<ul>
+<li>An Internet browser</li>
+</ul>
+<h4 id="introduction">Introduction</h4>
+<p>Browser developer tools allow web developers to quickly collect important information on most websites. These tools are available within most major web browsers, like Chrome, Safari, and Firefox, to name a few. Because Google Chrome is the preferred browser for many professional developers, we'll learn how to use the browser developer tools that Google Chrome provides, known as Chrome DevTools. </p>
+<h4 id="step-1-accessing-devtools">Step 1: Accessing DevTools</h4>
+<p>The quickest way of accessing DevTools in Chrome is to navigate to any website (like this one) and <em>right click</em> (press <code>Ctrl</code> and click for a single button mouse) anywhere on the page. Upon doing so, a menu will appear directly beside the area you clicked on. In the menu, select "Inspect." This will automatically launch DevTools within your browser. DevTools will appear as a window on either the bottom or right hand side of your screen. It should look something like this: </p>
+<p><img src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-2/devtools.png" alt="devtools"></p>
+<p>You should see the following tabs: <code>Elements</code>, <code>Console</code>, <code>Sources</code>, <code>Network</code>, <code>Timeline</code>, <code>Profiles</code>, <code>Application</code>, <code>Security</code> and <code>Audits</code>. </p>
+<p>This rest of this article will focus exclusively on the <code>Elements</code> tab.</p>
+<h4 id="step-2-using-devtools-to-view-css-styles">Step 2: Using DevTools to View CSS Styles</h4>
+<p>DevTools can provide you with a lot of information about a website, but it's particularly exceptional at examining a page's HTML elements, along with the CSS styles for those respective elements. Let's try it out!</p>
+<p>1. Open an incognito Chrome browser (in the browser's menu, click on "File" then "New Incognito Window"). This will allow you to read this article while completing the following steps.<br>2. Navigate to <a href="https://codecademy.com/" target="_blank">Codecademy's homepage</a> (make sure you are logged out).<br>3. Right click (or <code>Ctrl</code> and click simultaneously) on the heading that says "Learn to code interactively, for free."<br>4. Select "Inspect" in the menu that appears.<br>5. DevTools should appear at the bottom of your page (it's normal if its appears in another location, as its location can be changed).<br>6. Click on the "Elements" tab of DevTools (if you're not already on it).  </p>
+<p><img src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-2/click-on-elements-tab.jpg" alt="elementstab"></p>
+<p>7. In the left pane, notice the interactive DOM (HTML elements) that contains the current content of the web page.<br>8. Mouse over the HTML code – as you mouse over, notice that DevTools will highlight the corresponding HTML element on the web page.<br>9. Note that you can expand closed elements by clicking the arrow directly to the left of them.</p>
+<p><img src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-2/expand-element.jpg" alt="expandelement"></p>
+<p>10. Alternatively, click the "Select element" icon (shown in the image below) in the top-left corner of the console and then click on an element within the web page – this is a much quicker way of accessing a specific element on the web page that you want to inspect.  </p>
+<p><img src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-2/select-element.jpg" alt="selectelement"></p>
+<p>11. On the right hand side of DevTools, click on the tab named <code>Styles</code> (if you're not already on it) — this tab displays <em>all</em> of the CSS styles associated with the element highlighted in the left side of DevTools.<br>12. Scroll down in the <code>Styles</code> tab, notice that some CSS styles are crossed out with a horizontal black line.</p>
+<p><img src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-2/unused-styles.jpg" alt="unused"></p>
+<p>13. Remember, the <code>Styles</code> tab shows <em>all</em> styles applied to that element (rules can often be overwritten by more specific rules, which causes the horizontal black line through some CSS rules, denoting that that rule is not being used).<br>14. To instead view <em>only</em> the styles applied to that specific element, click on the <code>Computed</code> tab directly next to the <code>Styles</code> tab in the right pane. In this pane, you will see only the styles that are being applied to that element, also known as the <em>computed styles</em>. (If the <code>Computed</code> tab is not appearing for you, your browser may be sized too small. Expand the width of the browser until it appears.)</p>
+<p><img src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-2/computed-tab.jpg" alt="computed"></p>
+<h4 id="step-3-modifying-css-styles-with-devtools">Step 3: Modifying CSS Styles with DevTools</h4>
+<p>DevTools is also useful for modifying <em>existing</em> CSS rules and previewing those changes directly on the page you're viewing. </p>
+<p>To try it out, click again on the <code>Styles</code> tab in the right pane of DevTools (feel free to use the Codecademy website again). Scroll down to a CSS rule (one that is <em>not</em> crossed out with a black line), click on the value of any applied CSS rule, change the value, and press "Enter" (or "return") on your . You should see the change automatically update on the page. </p>
+<p><img src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-2/edit-a-style.jpg" alt="editStyles"></p>
+<p>There are a few things to keep in mind when using DevTools to modify a web page:</p>
+<ol>
+<li>When you modify or change a CSS rule, you may be affecting more than one element.</li>
+<li>DevTools provides easy-to-use tools when you modify certain CSS rules. (For example, when modifying color values, DevTools will provide you with a color picker to help you select a color.)</li>
+<li>DevTools is only a <em>sandbox</em> tool, meaning that any changes you make to the web page will <em>not be saved</em>, so make sure to write down any changes you'd like to make when using DevTools for your own web page!</li>
+</ol>
+<h4 id="step-4-add-css-styles-with-devtools">Step 4: Add CSS Styles with DevTools</h4>
+<p>In addition to modifying existing CSS rules, you can add <em>new</em> CSS rules as well. Let's continue using DevTools on the Codecademy homepage.</p>
+<ol>
+<li>Notice that the homepage has a large heading in the middle: "Learn to code interactively, for free."</li>
+<li>Right click on the heading and click "Inspect" in the menu that appears. DevTools will highlight the corresponding HTML element in its left pane.</li>
+<li>Take a look at the <code>Styles</code> tab and click on the <code>+</code> icon in the top-right corner of the right pane – notice that this creates a new, empty CSS rule for that element.</li>
+<li>Within the element's selector, click and add a new CSS declaration. The following is an example:</li>
+</ol>
+<pre><code class="lang-css"><span wrap="true" class="_18cGopAuUQVCOplu8pL9b5 _12mn8XNbByNCYxyzndA6if _3xp4c3Gvny8Oap6jE2-Q_ _2RE0-ZG6UYzWFn9_EER397 undefined" data-reactroot="" data-reactid="1" data-react-checksum="377328817"><div class="CodeMirror" data-reactid="2"><span class="cm-tag" data-reactid="3">background-color</span><!-- react-text: 4 -->:<!-- /react-text --><!-- react-text: 5 --> <!-- /react-text --><span class="cm-variable-3" data-reactid="6">red</span><!-- react-text: 7 -->;<!-- /react-text --></div></span>
+</code></pre>
+<p>You should see the background color of the heading change to red. You can also continue to add your own CSS styling as you wish.</p>
+<p>In the future, feel free to try this on your own website(s) as you build them from the ground up. Building with DevTools can result in a more efficient workflow, as it can help you avoid repeatedly saving and viewing changes manually.</p>
+<h4 id="step-5-modify-html-with-devtools">Step 5: Modify HTML with DevTools</h4>
+<p>DevTools also lets you directly <em>modify</em> the HTML content of a web page. Let's try this out one more time on the Codecademy homepage.</p>
+<ol>
+<li>Again, right click on the heading in the center of the homepage ("Learn to code interactively, for free") and click "Inspect" in the menu that appears.</li>
+<li>DevTools will automatically highlight the HTML code in the left pane associated with the content that you inspected on the web page.</li>
+<li>Double click on the heading text between the <code>&lt;h1&gt;</code> opening and closing tags in the left pane.</li>
+<li>Change the heading to say something else, like your name, or "Codecademy", and press Enter.</li>
+</ol>
+<p><img src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-2/edit-an-element.jpg" alt="editElement"></p>
+<p>At this point, you should see the web page's heading change and say something entirely different. </p>
+<p>You can also add HTML of your own as well. Let's add an <code>&lt;h2&gt;</code> element directly below the heading you just modified.</p>
+<ol>
+<li>Right click on the <code>&lt;h1&gt;</code> element you just modified, a menu should appear. Click on "Edit as HTML." (You can also delete elements using this menu.)</li>
+<li>A large text field should appear. Directly edit the HTML by adding an <code>&lt;h2&gt;</code> element below the <code>&lt;h1&gt;</code> with the text of your choice. </li>
+<li>To complete/view your changes, click on any other element in the left window pane or press <code>Command</code> and <code>Enter</code> at the same time (on a Mac keyboard).</li>
+</ol>
+<p>What happens to the web page? Remember, these are sandboxed changes, so your changes will not be saved, nor permanently affect the website you are applying changes to.</p>
+<h4 id="review">Review</h4>
+<p>The Chrome web browser provides you with robust web developer tools known as DevTools. With DevTools, you can view a web page's existing DOM elements and associated styles, as well as modify and preview changes you make to the web page, resulting in an efficient workflow. If you're interested in learning more about DevTools, visit the official documentation at <a href="https://developer.chrome.com/devtools" target="_blank">https://developer.chrome.com/devtools</a>.</p>
+<p>Happy coding!</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!--
+ INSTRUCTIONS:
+
+The image at the top of the page needs to be smaller. Navigate to style.css and write a CSS selector for the img.
+
+Within its curly braces, write:
+
+height: 150px;
+Stuck? Get a hint
+2.
+The font size of the recipe description should be larger. In style.css, write a CSS selector for the .description class.
+
+Within its curly braces, write:
+
+font-size: 20px;
+Stuck? Get a hint
+
+3.
+Next, lets style the cooking time. The element on line 15 of index.html has an id attribute of cook-time. Navigate to style.css and add a cook-time ID selector.
+
+Inside of its curly braces, write:
+
+font-weight: bold;
+Stuck? Get a hint
+
+4.
+Now, lets change the bullet points of the ingredient list to squares instead of circles. Start by writing a selector for the li elements inside of the .ingredients element.
+
+Then, write this inside of its curly braces:
+
+list-style: square;
+Stuck? Get a hint
+5.
+Next lets make the time for each preparation step appear gray. In style.css, write a selector for p elements that also have a class of .time.
+
+Then, inside of this selectors curly braces, write:
+
+color: gray;
+Stuck? Get a hint
+6.
+At the bottom of the page, theres a link to the full recipe. Lets make the link a different color.
+
+Notice that in index.html, on line 42, there is a p element with a class of citation, then an a element inside of it with a class of external-link. Navigate to style.css and write a selector using these two classes to select the link.
+
+Then, add this code inside of the selectors curly braces:
+
+color: SeaGreen;
+Stuck? Get a hint
+7.
+Finally, lets make the font Helvetica instead of the default Times New Roman. Instead of writing multiple selectors to apply the font-family property, write a selector that applies a font-family attribute to all text at once.
+
+The selector should target the h1, h2, p, and li elements.
+
+To change their font, include this line of code inside the curly braces:
+
+font-family: Helvetica;
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Quinoa and Kale Salad Recipe</title>
+  <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+  <img src="https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-2/salad.jpg" />
+  <h1>Kale Caesar Quinoa Salad with Roasted Chicken</h1>
+  <p class="description">Kale and quinoa provide a healthy base for roasted chicken topped with a light Caesar sauce.</p>
+
+  <p id="cook-time">Total time: 45 minutes</p>
+
+  <h2>Ingredients</h2>
+  <ul class="ingredients">
+    <li>1/4 cup kale</li>
+    <li>1 cup Quinoa</li>
+    <li>2 tbsp Olive Oil</li>
+    <li>1 chicken breast</li>
+    <li>Caesar Dressing</li>
+  </ul>
+
+  <h2>Preparation</h2>
+  <ol>
+    <li>
+      <p>Prepare quinoa and roast chicken until golden brown and 165 in middle.</p>
+      <p class="time">Time: 40 minutes</p>
+    </li>
+    <li>
+      <p>Toss quinoa, chicken, kale, and Caesar dressing until coated.</p>
+      <p class="time">Time: 4 minutes</p>
+    </li>
+    <li>
+      <p>Add walnuts and olive oil as garnish.</p>
+      <p class="time">Time: 1 minute</p>
+    </li>
+  </ol>
+
+  <p class="citation">Find this recipe and more <a href="http://www.myrecipes.com/recipe/kale-caesar-salad-chicken" target="_blank" class="external-link">here</a>.</p>
+
+</body>
+
+</html>

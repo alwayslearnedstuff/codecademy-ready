@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSS Notes</title>
+  </head>
+  <body>
+    <h1> Day 1: CSS Setup</h1>
+    <p>Here's a sample page with CSS:</p>
+      <textarea rows="50" cols="175">
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,100' rel='stylesheet' type='text/css'>
+        
+          </head>
+          <body>
+            <div class="header">
+              <div class="container">
+                <h1>Innovation Cloud</h1>
+                <p>Connect your ideas globally</p>
+                <a class="btn" href="#">Learn More</a>
+              </div>
+            </div>
+        
+            <div class="nav">
+              <div class="container">
+                <ul>
+                  <li>Register</li>
+                  <li>Schedule</li>
+                  <li>Sponsors</li>
+                  <li>About</li>
+                  <li>Contact</li>
+                </ul>
+              </div>
+            </div>
+        
+            <div class="main">
+              <div class="container">
+                <img src="https://s3.amazonaws.com/codecademy-content/projects/innovation-cloud/cloud.svg" height="128" width="196">
+                <h2>The Innovation Cloud Conference</h2>
+                <p>Connect with the best minds across a wide range of industries to share ideas and brainstorm new solutions to challenging problems.</p>
+                <p>Hear industry leaders talk about what worked (and what didn't) so that you can save time on your most challenging projects.</p>
+                <p>Learn about the latest research and technologies that you can use immediately to invent the future.</p>
+              </div>
+            </div>
+        
+            <div class="jumbotron">
+              <div class="container">
+                <h2>Stay Connected</h2>
+                <p>Receive weekly insights from industry insiders.</p>
+                <a class="btn" href="#">Join</a>
+              </div>
+            </div>
+        
+            <div class="footer">
+              <div class="container">
+                <p>&copy; Innovation Cloud Conference</p>
+              </div>
+            </div>
+          </body>
+        </html>
+    </textarea>
+    <p>Adding this line completely modernizes the look of the page:</p>
+        <textarea cols="150">
+            <link href="style.css" type="text/css" rel="stylesheet">
+      </textarea>
+      
+    <p>Learned to insert style into an html page then into CSS file</p>  
+    <p>CSS operators by "selecting" HTML elements and their attributes:</p>
+    <ul>
+      <li>CSS uses <em>selectors</em> in the following format with declaration containing a <em>property:value;</em> relationship:</li>
+      <li><code>
+        p { 
+        color: blue; 
+        } 
+      </code></li>
+      <li><em>selectors</em> can access not just HTML tags (e.g. p, h1, div) but 
+      also <em>attributes</em>: e.g. (class, id)</li>
+      <li>Here's an HTML element with attribute: <p class="normal-paragraph"> and it's selector:</li>
+      <li><code>
+        .class {
+          color: gray;
+        }
+      </code></li>
+    </ul>
+    <h5>Specificity</h5>
+    <ul>
+      <li>CSS order of operations by first to last: id, class, tag</li>
+      <li><h5>CSS chaining</h5></li>
+      <li>You can "chain" elements and classes, e.g.: h1.special</li>
+      <li><strong>Selecting child elements</strong></li>
+      <li>This selects the h5 element in div with class description:</li>
+      <li><code>div.description h5 {color: blue;}  </code></li>
+      <li> The p elements in the <em>main</em> class below will be red, while rest in doc will be blue:</li>
+      <li>
+        <code>
+          
+            p {
+              color: blue;
+            }
+            
+            .main p {
+              color: red;
+            }
+        </code>
+      </li>
+      <li>You can avoid redundancy by applying same styles to multiple different selectors, e.g.:</li>
+      <li>
+        <code>
+          h3, p {
+            color: blue;
+          }
+        </code>
+      </li>
+    </ul>
+    <h5>CSS Visual Rules</h5>
+    <ul>
+      <li>font type: <code>font-family: Garamond;</code></li>
+      <li>font size: <code>font-size: 10px;</code></li>
+      <li>font weight, e.g. bold: font-weight: bold</li>
+        <ul>
+          <li>You can have all font bold, then one paragraph not, by doing this:</li>
+          <li>font-weight: normal;</li>
+        </ul>
+      <li>text auto aligns left <em>inside</em> elements. To change that: <code>text-align: right;</code></li>
+      <li>Two kinds of color: <em>foreground</em> and <em>background</em></li>
+        <ul>
+          <li><em>foreground</em> deals with element text</li>
+          <li><em>background</em> deals with the element's background</li>, e.g.:
+          <code>
+            h1 {
+              color: red;
+              background-color: blue;
+            }
+          </code>
+        </ul>
+      <li>
+        <em>opacity</em> controls transparency where 0 is transparent and 1 is opaque, e.g.: <code> .overlay {
+          opacity: 0.5;
+        }</code>
+      </li>    
+      <li>CSS can change the background of an element such as with an image, e.g.</li>
+      <ul>
+        <li> external: 
+          <code>.main-banner {
+                  background-image: url("https://www.example.com/image.jpg");
+                }
+          </code></li>
+        <li>local: 
+          <code>
+            .main-banner {
+              background-image: url("images/mountains.jpg");
+            }
+          </code>
+        </li>
+      </ul>
+    </ul>
+    <p><a href="./usingChromeDevTools.html">Using Chrome Dev Tools</a></p>
+  </body>
+</html>
