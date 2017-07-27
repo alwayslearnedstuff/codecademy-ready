@@ -9,7 +9,68 @@
       <li>Vertical margin collapses and browsers take the bigger margin:</li>
       <li>if top box has 30px margin and box right below 20px, it's not 50px; it's 30px</li>
     </ul>
+    <h2>Display property</h2>
+    <ul>
+      <li>Inline</li>
+      <li>Inline-block</li>
+      <li>block</li>
+    </ul>
+    <ul>
+      <li>
+        The default display for some tags, such as <em>, <strong>, and <a>, is called inline. Inline elements have a box that wraps tightly around their content, only taking up the amount of space necessary to display their content and not requiring a new line after each element.
+      </li>
+      <li>more on elements from Mozilla <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements">here</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements">Block-level elements take up whole line</a></li>
+      <li></li>
+<p>In the next three exercises, you'll learn about the values in items 2, 3, and 4 above. If you prefer the default position of an HTML element, you don't need to set its position property because setting <code>position: static</code> should not change the position of any elements.</p>
+</div>
+    </ul>
+          <div class="jfdpfOzslotw2euWgxJNN _1PzvoBkjTI2SFvb5o9YAHW"><p>The previous three exercises described three values for the <code>display</code> property, which we used to alter an element’s box and specify whether multiple elements can appear on the same line. Another property that we can use to specify how elements appear on a web page is the <code>position</code> property.</p>
+<p>The <code>position</code> property specifies where an element is placed in relation to other elements and whether the element moves when the user scrolls. Just as all elements have a default <code>display</code> value, they also have a default <code>position</code> value.  We can change the default position of an element by setting its position property. The position property can take one of four values:</p>
+<ol>
+<li><code>static</code> — an element will be positioned where it naturally occurs in the flow of the document from left to right, top to bottom (the default value).</li>
+<li><code>absolute</code> — an element will be positioned exactly where it is specified in relation to the nearest non-statically positioned element; it is removed from the flow of the web page.</li>
+<li><code>relative</code> — an element will be positioned in relation to where it would have occurred in the flow of the document; it is NOT removed from the flow and space is reserved for it.</li>
+<li><code>fixed</code> — an element will be positioned in the same place in the viewport of the browser (the part of the browser that contains the website being viewed) at all times, even if the user scrolls; it is removed from the flow of the web page.</li>
+</ol>
+<p>The next thing to keep in mind is that when an element’s position is changed to absolute, the element will move to the top left of the nearest container element that is not statically positioned. If no elements on the page have position declarations, the element will move to the top left of the view and move as the user scrolls. If the parent container of an element (such as a <code>div</code> that contains an image) is positioned, the absolutely positioned element (the image) will be positioned relative to the containing element (the <code>div</code>).</p>
+<div class="jfdpfOzslotw2euWgxJNN _1PzvoBkjTI2SFvb5o9YAHW"><p>In the previous exercise, you learned that an element with <code>position: absolute</code> will be located in relation to the nearest element that has a <code>position</code> value other than <code>static</code>. Now, we are going to cover how to specify where the absolutely positioned element should go.</p>
+<pre><code class="lang-html"><span wrap="true" class="_18cGopAuUQVCOplu8pL9b5 _12mn8XNbByNCYxyzndA6if _3xp4c3Gvny8Oap6jE2-Q_ _2RE0-ZG6UYzWFn9_EER397 undefined" data-reactroot="" data-reactid="1" data-react-checksum="-1734106394"><div class="CodeMirror" data-reactid="2"><span class="cm-tag bracket" data-reactid="3">&lt;</span><span class="cm-tag" data-reactid="4">div</span><!-- react-text: 5 --> <!-- /react-text --><span class="cm-attribute" data-reactid="6">class</span><!-- react-text: 7 -->=<!-- /react-text --><span class="cm-string" data-reactid="8">"container"</span><span class="cm-tag bracket" data-reactid="9">&gt;</span><!-- react-text: 10 -->
+<!-- /react-text --><!-- react-text: 11 -->  <!-- /react-text --><span class="cm-tag bracket" data-reactid="12">&lt;</span><span class="cm-tag" data-reactid="13">img</span><!-- react-text: 14 --> <!-- /react-text --><span class="cm-attribute" data-reactid="15">src</span><!-- react-text: 16 -->=<!-- /react-text --><span class="cm-string" data-reactid="17">"#"</span><!-- react-text: 18 --> <!-- /react-text --><span class="cm-tag bracket" data-reactid="19">/&gt;</span><!-- react-text: 20 -->
+<!-- /react-text --><span class="cm-tag bracket" data-reactid="21">&lt;/</span><span class="cm-tag" data-reactid="22">div</span><span class="cm-tag bracket" data-reactid="23">&gt;</span></div></span>
+</code></pre>
+<pre><code class="lang-css"><span wrap="true" class="_18cGopAuUQVCOplu8pL9b5 _12mn8XNbByNCYxyzndA6if _3xp4c3Gvny8Oap6jE2-Q_ _2RE0-ZG6UYzWFn9_EER397 undefined" data-reactroot="" data-reactid="1" data-react-checksum="-1080923702"><div class="CodeMirror" data-reactid="2"><span class="cm-qualifier" data-reactid="3">.container</span><!-- react-text: 4 --> <!-- /react-text --><!-- react-text: 5 -->{<!-- /react-text --><!-- react-text: 6 -->
+<!-- /react-text --><!-- react-text: 7 -->  <!-- /react-text --><span class="cm-property" data-reactid="8">position</span><!-- react-text: 9 -->:<!-- /react-text --><!-- react-text: 10 --> <!-- /react-text --><span class="cm-atom" data-reactid="11">relative</span><!-- react-text: 12 -->;<!-- /react-text --><!-- react-text: 13 -->
+<!-- /react-text --><!-- react-text: 14 -->}<!-- /react-text --><!-- react-text: 15 -->
+<!-- /react-text --><span class="cm-tag" data-reactid="16">img</span><!-- react-text: 17 --> <!-- /react-text --><!-- react-text: 18 -->{<!-- /react-text --><!-- react-text: 19 -->
+<!-- /react-text --><!-- react-text: 20 -->  <!-- /react-text --><span class="cm-property" data-reactid="21">position</span><!-- react-text: 22 -->:<!-- /react-text --><!-- react-text: 23 --> <!-- /react-text --><span class="cm-atom" data-reactid="24">absolute</span><!-- react-text: 25 -->;<!-- /react-text --><!-- react-text: 26 -->
+<!-- /react-text --><!-- react-text: 27 -->  <!-- /react-text --><span class="cm-property" data-reactid="28">top</span><!-- react-text: 29 -->:<!-- /react-text --><!-- react-text: 30 --> <!-- /react-text --><span class="cm-number" data-reactid="31">50px</span><!-- react-text: 32 -->;<!-- /react-text --><!-- react-text: 33 -->
+<!-- /react-text --><!-- react-text: 34 -->  <!-- /react-text --><span class="cm-property" data-reactid="35">left</span><!-- react-text: 36 -->:<!-- /react-text --><!-- react-text: 37 --> <!-- /react-text --><span class="cm-number" data-reactid="38">40px</span><!-- react-text: 39 -->;<!-- /react-text --><!-- react-text: 40 -->
+<!-- /react-text --><!-- react-text: 41 -->}<!-- /react-text --></div></span>
+</code></pre>
+<p>In the example above, the image will be located 50 pixels from the top and 40 pixels from the left of the <code>.container</code> element.</p>
+<p>There are 4 values for offsetting position:</p>
+<ol>
+<li><code>top</code> — specifies how far from the top of the non-static parent container the element should be.</li>
+<li><code>left</code> — specifies how far from the left of the non-static parent container the element should be.</li>
+<li><code>right</code> — specifies how far from the right of the non-static parent container the element should be.</li>
+<li><code>bottom</code> — specifies how far from the bottom of the non-static parent container the element should be.</li>
+</ol>
+<p><strong>Note:</strong> It is generally not effective to specify all four values; a small element likely cannot be both 30 pixels from the left and 40 pixels from the right of the containing element because the container is probably much wider than that.</p>
+<p>Absolute positioning has fallen out of practice with the advent of mobile development. Absolute positioning determines exactly where an element will appear on a screen and removes an element from the flow of the document. While an element might appear perfectly positioned on the screen you use for development, on a small screen it may overlap other elements or appear in an unexpected location.</p>
+</div>
+<ol>
+<li>The default positioning of elements is based on the <em>flow</em> of the HTML file.</li>
+<li>Inline elements appear next to each other on the same line.</li>
+<li>You can position elements to be displayed on their own line using block display.</li>
+<li>Inline-block elements are on the same line as each other and their size can be set.</li>
+<li>The default positioning for any element is <code>static</code> which means it will appear exactly as it does in the flow of the HTML document.</li>
+<li>Elements with <code>absolute</code> positioning are removed from the flow of the document and positioned in relation to the parent element. This positioning will override display properties. An element with absolute positioning will scroll.</li>
+<li>Elements with <code>fixed</code> positioning will not scroll as the page scrolls.  This removes the element from the flow of the document.</li>
+<li>Elements with <code>relative</code> positioning specify the element's distance from where it would have been positioned in the flow of the HTML document.</li>
+<li>Non-static elements can be displayed in front or behind another element using the <code>z-index</code> property.</li>
+</ol>
 
-    
+
   </body>
 </html>
