@@ -19,6 +19,7 @@ nav {
 
 nav img {
   display: block;
+  width: 180px;
 }
 
 nav span {
@@ -77,6 +78,7 @@ nav a {
   color: #05A8AA;
   display: block;
   font-weight: 700;
+  width: 200px;
 }
 
 .button:hover {
@@ -94,6 +96,7 @@ ul.nutrition li {
   display: inline-block;
   background-color: #05A8AA;
   list-style: none;
+  width: 200px;
 }
 
 .nutrition .category {
