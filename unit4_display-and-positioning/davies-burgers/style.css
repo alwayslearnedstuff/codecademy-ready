@@ -20,6 +20,7 @@ nav {
 nav img {
   display: block;
   width: 180px;
+  margin: 0 auto; 
 }
 
 nav span {
@@ -27,6 +28,7 @@ nav span {
   font-size: 16px;
   font-weight: 100;
   letter-spacing: 2px;
+  margin: 10 0;
 }
 
 nav a {
@@ -38,6 +40,7 @@ nav a {
 .content {
   width: 100%;
   height: 500px;
+  margin: 10 auto;
 }
 
 /* Content Header */
@@ -58,12 +61,14 @@ nav a {
   line-height: 40px;
   width: 68%;
   padding: 20px;
+  margin: 0 auto;
 }
 
 /* Content Body */
 
 .content .body {
   width: 90%;
+  margin: 0 auto;
 }
 
 .body p {
@@ -83,6 +88,7 @@ nav a {
   font-weight: 700;
   width: 200px;
   padding: 20px;
+  margin: 40px auto;
 }
 
 .button:hover {
@@ -103,6 +109,7 @@ ul.nutrition li {
   list-style: none;
   width: 200px;
   padding: 10 20;
+  margin-bottom: 3px;
 }
 
 .nutrition .category {
