@@ -16,8 +16,8 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  position: fixed;
-  z-index: 20;
+  position: fixed;  /* new */
+  z-index: 20;      /* new */
 }
 
 nav {
@@ -32,7 +32,7 @@ nav ul {
 
 nav li {
   margin: 0 40px;
-  display: inline-block;
+  display: inline-block;  /* new */
 }
 
 nav a {
@@ -87,11 +87,11 @@ nav a:hover {
   font-family: 'Varela Round', sans-serif;
   font-size: 26px;
   font-weight: 100;
-  display: block;
+  display: block;  /* new  - this puts questions on their own line */
 }
 
 .answer {
-  display: inline-block;
+  display: inline-block;   /* new */
   width: 220px;
   padding: 57px 0;
   border: 1px solid #466995;
